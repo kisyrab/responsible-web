@@ -1,0 +1,40 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{text-decoration: none; color: inherit;}
+ul, li, ol{list-style: none;}
+img{vertical-align: baseline;}
+table{border-collapse: collapse;}
+
+input{
+    border: 1px solid #e65d5d;
+    color: #e65d5d;
+}
+input::-webkit-input-placeholder{
+    color: #e65d5d;
+}
+
+body{font-family: "나눔고딕" , Arial, Helvetica, sans-serif;
+    background: url(../images/s_images/body_bg.png);
+}
+
+
+/* web font만들기 */
+@font-face {
+    font-family: 나눔고딕; /* 내가만든이름 */
+    src: url(../webfont/NanumGothic.woff);
+}
+@font-face {
+    font-family: 나눔고딕; /* 내가만든이름 */
+    src: url(../webfont/NanumGothic.eot);
+}
+
+@font-face {
+    font-family: 어비베이비; /* 내가만든이름 */
+    src: url(../webfont/UhBee\ baby.ttf);
+}
+
+@font-face {
+    font-family: 어비베이비볼드; /* 내가만든이름 */
+    src: url(../webfont/UhBee\ baby\ Bold.ttf);
+}
+

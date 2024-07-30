@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex의 다양한 하위명령어들</title>
+
+    <style type="text/css">
+        .container{
+            background-color: antiquewhite;
+            padding: 20px;
+            display: flex;
+            /* display: inline-flex; */
+            /* flex-direction: row;
+            flex-wrap: wrap; 아래는 합쳐쓰기 */
+            /* flex-flow: row wrap; */
+        }
+        .item{
+            background-color: burlywood;
+            border: 1px solid teal;
+            /* flex-basis: auto;   */
+            /* default */
+            /* 기본방향이 row일때는 너비때문에 사용하는 명령어다. */
+            /* 기본방향이 column일때는 높이때문에 사용 */
+
+            /* flex-basis: 0; */
+            /* flex-basis: 50%; */
+            /* flex-basis: 300px; */
+            /* flex-basis: 10rem; */
+            /* flex-basis: content; */
+
+            /* width: 100px; */
+            flex-basis: 300px;
+
+            /* flex-grow: 1;  */
+            /* flex-grow: 0; 디폴트  */
+            /* flex-basis 값보다 커질 수 있는지 결정하는 속성 */
+            /* 0보다 큰 값(1)이 셋팅되면 유연한 박스로 사용 */
+            
+            flex-shrink: 1;
+            /* flex-shrink: 1; 디폴트 */
+            /* 유연하게 줄이기 flex-grow랑 같이 씀 */
+            /* flex-basis 값보다 작아질 수 있는지 결정하는 속성 */
+            /* flex-shrink: 0; 보다 큰 값이 셋팅되면 해당 아이템은 유연한 박스로 사용하고 flex-basis 값보다 작아질 수 있다.*/
+
+
+            /* 축약형태 알아보기 // 순서는 고정임*/
+            flex: 1;
+            /* flex-grow: 1; flex-shrink: 1; flex-basis: 0%; */
+            
+            flex: 1 1 auto;
+            /* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
+            
+            flex: 1 500px;
+            /* flex-grow: 1; flex-shrink: 1; flex-basis: 500px; */
+            
+            flex: 2 1 0;
+            /* flex-grow: 2; flex-shrink: 1; flex-basis: 0; */
+            
+        }
+
+        /* 아이템 별로 늘릴 때 너비 비율 정하기 */
+        /* .item:nth-child(1){flex-grow: 1;}
+        .item:nth-child(2){flex-grow: 2;}
+        .item:nth-child(3){flex-grow: 1;} */
+
+        *{margin: 0; padding: 0;}
+        li, ul{list-style: none;}
+
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: cadetblue;
+            padding: 20px;
+        }
+        .box li{
+            border: 1px solid tan;
+            flex: 1 1 40%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item">hi hello flex</div>
+        <div class="item">abc abc abc abc abc abc abc abc abc abc abc abc 초콜릿 </div>
+        <div class="item">bye bye flex</div>
+    </div> 
+
+    <ul class="box">
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+
+</body>
+</html>
